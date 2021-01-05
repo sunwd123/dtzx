@@ -19,9 +19,9 @@ class AutoPlay():
         # 百度提供
         """ 你的 APPID AK SK """
         img = self.img
-        APP_ID = '23486472'  # 应用的appid
-        API_KEY = 'T8pp2Gl7K1jYyy2nrmsygijY'  # 应用的appkey
-        SECRET_KEY = 'e4iGxk0UrMKd36hbC9hPg2pTk8PxYqUL'  # 应用的secretkey
+        APP_ID = ''  # 应用的appid
+        API_KEY = ''  # 应用的appkey
+        SECRET_KEY = ''  # 应用的secretkey
         client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
         """ 调用通用文字识别（高精度版） """
         img.save("new.png")
