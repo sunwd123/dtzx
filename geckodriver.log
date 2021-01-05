@@ -1,0 +1,100 @@
+1609731673794	geckodriver	INFO	Listening on 127.0.0.1:55462
+1609731679826	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofilevcKK75"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609731681928	Marionette	INFO	Listening on port 55489
+1609731681952	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739667881	Marionette	INFO	Stopped listening on port 55489
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+"--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileh2UfZM"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609731774571	Marionette	INFO	Listening on port 55712
+1609731774613	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609731781963	Marionette	INFO	Stopped listening on port 55712
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609732430855	geckodriver	INFO	Listening on 127.0.0.1:57264
+1609732436901	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofilelvj62j"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609732439040	Marionette	INFO	Listening on port 57281
+1609732439525	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609732447091	Marionette	INFO	Stopped listening on port 57281
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609739161075	geckodriver	INFO	Listening on 127.0.0.1:63786
+1609739167118	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileoiDaTm"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739169240	Marionette	INFO	Listening on port 63802
+1609739169741	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739177216	Marionette	INFO	Stopped listening on port 63802
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609739194213	geckodriver	INFO	Listening on 127.0.0.1:63878
+1609739200237	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileMHR7hB"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739202188	Marionette	INFO	Listening on port 63891
+1609739202261	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739246919	geckodriver	INFO	Listening on 127.0.0.1:63993
+1609739252962	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileUDBC4C"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739254836	Marionette	INFO	Listening on port 64007
+1609739254982	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739315601	Marionette	INFO	Stopped listening on port 64007
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609739339884	geckodriver	INFO	Listening on 127.0.0.1:64147
+1609739345914	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileDFSeGk"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739347891	Marionette	INFO	Listening on port 64165
+1609739347955	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739359690	Marionette	INFO	Stopped listening on port 64165
+1609739540353	geckodriver	INFO	Listening on 127.0.0.1:64491
+1609739546398	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileRpu5xo"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739548458	Marionette	INFO	Listening on port 64521
+1609739548530	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739578168	Marionette	INFO	Stopped listening on port 64521
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1609739617911	geckodriver	INFO	Listening on 127.0.0.1:64649
+1609739623949	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\SUNWD\\AppData\\Local\\Temp\\rust_mozprofileFt0dAJ"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1609739625926	Marionette	INFO	Listening on port 64664
+1609739625984	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://sso.dtdjzx.gov.cn/sso/js/bundles-70c819e900.js, line 8: TypeError: $(...).offset() is undefined
+1609739638088	Marionette	INFO	Stopped listening on port 64664
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
