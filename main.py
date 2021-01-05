@@ -11,8 +11,8 @@ import math
 class AutoPlay():
     def __init__(self) -> None:
         self.driver = webdriver.Chrome(executable_path=r"F:\dtzx\chromedriver.exe")
-        self.uid = "372924199307121816";
-        self.pwd = "maomao0712"
+        self.uid = "账号";
+        self.pwd = "密码"
         self.url = "https://sso.dtdjzx.gov.cn/sso/login"
 
     def baiduOCR(self):  # picfile:图片
