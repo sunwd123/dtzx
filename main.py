@@ -10,7 +10,7 @@ import math
 
 class AutoPlay():
     def __init__(self) -> None:
-        self.driver = webdriver.Chrome(executable_path=r"F:\dtzx\chromedriver.exe")
+        self.driver = webdriver.Chrome(executable_path=r"F:\dtzx\dtzx\chromedriver.exe")
         self.uid = "账号";
         self.pwd = "密码"
         self.url = "https://sso.dtdjzx.gov.cn/sso/login"
@@ -41,7 +41,7 @@ class AutoPlay():
         size = img.size  # 获取验证码的大小参数
         left = location['x'] + 200
         top = location['y'] + 130
-        right = left + size['width'] + 20
+        right = left + size['width'] + 30
         bottom = top + size['height'] + 8
         image_obj = page_snap_obj.crop((left, top, right, bottom))  # 按照验证码的长宽，切割验证码
         # image_obj.show()  # 打开切割后的完整验证码
@@ -109,7 +109,7 @@ class AutoPlay():
         flag = "djzx"
         self.driver.get(self.url)
         self.driver.maximize_window()
-        time.sleep(2)
+        time.sleep(3)
         while len(flag) > 0:
             self.driver.refresh()
             self.driver.find_element_by_id("username").send_keys(self.uid)
@@ -117,8 +117,7 @@ class AutoPlay():
             cardstr = str(self.image_str())
             print("验证码："+str(cardstr))
             self.driver.find_element_by_id("validateCode").send_keys(cardstr)
-            # # 30秒钟内登录系统
-            time.sleep(2)
+            time.sleep(1)
             self.driver.find_element_by_xpath('//*[@id="loginForm"]/div[4]/a[1]').click()
             time.sleep(1)
             try:
@@ -127,26 +126,73 @@ class AutoPlay():
                 flag = ""
             # js = "return document.getElementById('validateCodeMessage').innerText"
             # flag = str(self.driver.execute_script(js))
-        time.sleep(10)
-        self.driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/div/div[2]/div/div[1]/div[4]').click()
+        #打开党员教育网链接
+        while True :
+            try:
+                self.driver.find_element_by_xpath('/html/body/div[6]/div[3]/div/div/div[2]/div/div[1]/div[4]').click()
+                break
+            except:
+                time.sleep(1)
         time.sleep(2)
-        toHandle = self.driver.window_handles
-        self.driver.switch_to.window(toHandle[1])
-        time.sleep(2)
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
-        time.sleep(2)
-        self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
-        time.sleep(5)
-        tr_list = self.driver.find_elements_by_xpath(
-            '//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr')
+        #切换到党员教育页面
+        while True :
+            try:
+                toHandle = self.driver.window_handles
+                self.driver.switch_to.window(toHandle[1])
+                break
+            except:
+                time.sleep(1)
+        #打开个人空间
+        while True :
+            try:
+                self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
+                break
+            except:
+                time.sleep(1)
+        # time.sleep(2)
+        # self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
+        #刷新个人空间
+        while True :
+            try:
+                js = "return document.getElementsByClassName('period').length"
+                count = self.driver.execute_script(js)
+                if int(count) > 0:
+                    time.sleep(2)
+                    break
+                else:
+                    self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
+                    time.sleep(2)
+            except:
+                self.driver.find_element_by_xpath('//*[@id="app"]/div/div[3]/div/ul/li[10]/a').click()
+        #获取列表条数
+        time.sleep(3)
+        tr_list = self.driver.find_elements_by_xpath('//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr')
         list_count = len(tr_list)
+        print("初始列表条数:"+str(list_count))
         while list_count > 0:
-            print(list_count)
-            self.driver.find_element_by_xpath(
-                '//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr[1]/td[7]/div/span[2]/i').click()
-            time.sleep(5)
-            toHandle = self.driver.window_handles
-            self.driver.switch_to.window(toHandle[2])
+            #打开列表第一个视频
+            while True :
+                try:
+                    self.driver.find_element_by_xpath('//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr[1]/td[7]/div/span[2]/i').click()
+                    break
+                except:
+                    print("打开视频定时一秒")
+                    time.sleep(1)
+            while True :
+                try:
+                    toHandle = self.driver.window_handles
+                    self.driver.switch_to.window(toHandle[2])
+                    break
+                except:
+                    time.sleep(1)
+            #获取视频时间参数
+            while True :
+                try:
+                    js = "return parseInt(document.getElementsByTagName('video')[0].duration)"
+                    self.driver.execute_script(js)
+                    break
+                except:
+                    time.sleep(1)
             js = "return parseInt(document.getElementsByTagName('video')[0].duration)"
             sc = self.driver.execute_script(js)
             #判断是否自动播放，如果没有播放则手动播放
@@ -164,20 +210,24 @@ class AutoPlay():
             self.driver.execute_script(js)
             js = "return parseInt(document.getElementsByTagName('video')[0].currentTime)"
             e_time = self.driver.execute_script(js)
-            time.sleep(3)
-            print("已播放时间:"+str(math.ceil(e_time)))
-            print("开启定时："+str(math.ceil((sc-e_time)/2)+5))
-            time.sleep(math.ceil((sc-e_time)/2) + 5)
+            print("已播放时间:"+str(math.ceil(int(e_time))))
+            print("开启定时:"+str(math.ceil((int(sc)-int(e_time))/2)+5))
+            time.sleep(math.ceil((int(sc)-int(e_time))/2) + 5)
             self.driver.close()
+            time.sleep(2)
             toHandle = self.driver.window_handles
             self.driver.switch_to.window(toHandle[1])
             self.driver.refresh()
-            time.sleep(10)
-            tr_list = self.driver.find_elements_by_xpath(
-                '//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr')
+            while True :
+                try:
+                    self.driver.find_elements_by_xpath('//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr')
+                    break
+                except:
+                    time.sleep(1)
+            time.sleep(5)
+            tr_list = self.driver.find_elements_by_xpath('//*[@id="app"]/div/div[4]/div[4]/div/div[1]/div[3]/table/tbody/tr')
             list_count = len(tr_list)
-
-
+            print("刷新后条数:"+str(list_count))
 if __name__ == '__main__':
     auto_play = AutoPlay()
     auto_play.work();
